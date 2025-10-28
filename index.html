@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Citra</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <img src="fotocita.jpg" alt="Foto Profil" class="profile-photo" />
+      <div class="header-text">
+        <h1>Citra Dewi Cahya Nanda Zulfani</h1>
+        <p>@_czlfn | @citra</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="content-wrapper">
+      <nav>
+        <ul>
+          <li><a href="#" onclick="tampilKonten('biodata')">Biodata</a></li>
+          <li><a href="#" onclick="tampilKonten('pendidikan')">Pendidikan</a></li>
+          <li><a href="#" onclick="tampilKonten('pengalaman')">Pengalaman</a></li>
+          <li><a href="#" onclick="tampilKonten('keahlian')">Keahlian</a></li>
+        </ul>
+      </nav>
+
+      <section id="konten">
+        <!-- Default tampilan -->
+        <h2>Biodata</h2>
+        <p>
+          <strong>Nama:</strong> Citra Dewi Cahya Nanda Zulfani<br />
+          <strong>TTL:</strong> Jakarta, 9 Juni 2006<br />
+          <strong>Alamat:</strong> Karanganyar, Jawa Tengah<br />
+          <strong>Email:</strong> citradewicnz@gmail.com<br /><br /><br />
+
+          Saya lahir di Jakarta dan menghabiskan masa kecil di sana hingga kelas 2 SD.
+          Ketika memasuki kelas 3 dan 4, saya sempat pindah ke Palembang dan bersekolah di sana selama dua tahun.
+          Setelah itu, saya menetap di Kota Solo mulai dari kelas 5 SD hingga lulus SMA.
+          Perpindahan kota ini memberi banyak pengalaman berharga dalam beradaptasi dengan lingkungan baru dan berinteraksi dengan berbagai macam orang.<br /><br />
+
+          Saat ini, saya sedang menempuh pendidikan di <strong>Universitas Pembangunan Jaya</strong>
+          pada Program Studi <strong>Sistem Informasi</strong>.
+          Saya tertarik pada bidang pengembangan web, desain antarmuka pengguna (UI/UX), dan analisis sistem informasi.
+          Dalam keseharian, saya juga aktif mengikuti kegiatan kampus serta organisasi mahasiswa
+          untuk mengembangkan keterampilan sosial dan kepemimpinan.
+        </p>
+      </section>
+
+      <aside>
+        <h2>Tentang Saya</h2>
+        <p>
+          <strong>Hobi</strong><br />
+          • Bernyanyi<br />
+          • Melukis<br />
+          • Menonton Film<br /><br /><br />
+
+          Sejak kecil, saya selalu menemukan kebahagiaan saat bernyanyi;
+          setiap nada yang saya keluarkan membawa kegembiraan tersendiri dan membantu saya mengekspresikan perasaan serta melupakan penat.
+          Selain itu, melukis menjadi cara saya berbicara tanpa kata-kata, menuangkan imajinasi, emosi, dan cerita hidup melalui goresan kuas dan warna di kanvas,
+          yang membuat saya merasa lebih fokus dan kreatif.
+          Saya juga senang menonton film, dari animasi hingga drama.
+        </p>
+      </aside>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>IG: @_czlfn</p>
+        <p>Tiktok: @citra</p>
+      </div>
+      <div class="footer-center">
+        <p>&copy; 2025 Citra Dewi Cahya. All Rights Reserved.</p>
+      </div>
+      <div class="footer-right">
+        <p>Profile Citra</p>
+        <p>Informasi Tentang Citra</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT INTERAKTIF -->
+  <script>
+    function tampilKonten(menu) {
+      const konten = document.getElementById("konten");
+
+      if (menu === "biodata") {
+        konten.innerHTML = `
+          <h2>Biodata</h2>
+          <p>
+            <strong>Nama:</strong> Citra Dewi Cahya Nanda Zulfani<br />
+            <strong>TTL:</strong> Jakarta, 9 Juni 2006<br />
+            <strong>Alamat:</strong> Karanganyar, Jawa Tengah<br />
+            <strong>Email:</strong> citradewicnz@gmail.com<br /><br /><br />
+            Saya lahir di Jakarta dan menghabiskan masa kecil di sana hingga kelas 2 SD.
+            Ketika memasuki kelas 3 dan 4, saya sempat pindah ke Palembang dan bersekolah di sana selama dua tahun.
+            Setelah itu, saya menetap di Kota Solo mulai dari kelas 5 SD hingga lulus SMA.
+            Perpindahan kota ini memberi banyak pengalaman berharga dalam beradaptasi dengan lingkungan baru
+            dan berinteraksi dengan berbagai macam orang.<br /><br />
+            Saat ini, saya sedang menempuh pendidikan di <strong>Universitas Pembangunan Jaya</strong>
+            pada Program Studi <strong>Sistem Informasi</strong>.
+            Saya tertarik pada bidang pengembangan web, desain antarmuka pengguna (UI/UX), dan analisis sistem informasi.
+            Dalam keseharian, saya juga aktif mengikuti kegiatan kampus serta organisasi mahasiswa
+            untuk mengembangkan keterampilan sosial dan kepemimpinan.
+          </p>
+        `;
+      } else if (menu === "pendidikan") {
+        konten.innerHTML = `
+          <h2>Pendidikan</h2>
+          <p>
+            • SD Negeri 3 Jakarta<br />
+            • SMP Negeri 2 Jatipuro<br />
+            • SMA Negeri 1 Jumapolo<br />
+            • Universitas Pembangunan Jaya
+          </p>
+        `;
+      } else if (menu === "pengalaman") {
+        konten.innerHTML = `
+          <h2>Pengalaman</h2>
+          <p>
+            • Bendahara OSIS SMP<br />
+            • Anggota PMR<br />
+            • Panitia seminar Sistem Informasi<br />
+            • Anggota Himpunan Mahasiswa Sistem Informasi<br />
+            • Panitia SIFTAR 2025
+          </p>
+        `;
+      } else if (menu === "keahlian") {
+        konten.innerHTML = `
+          <h2>Keahlian</h2>
+          <p>
+            • Desain UI/UX<br />
+            • HTML, CSS, JavaScript<br />
+            • Manajemen acara<br />
+            • Analisis sistem informasi
+          </p>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>
